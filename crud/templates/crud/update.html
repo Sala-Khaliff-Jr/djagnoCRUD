@@ -1,0 +1,25 @@
+{% extends 'crud/index.html' %}
+{% block create_active %}
+<a class="nav-item nav-link active" href="/create">Create <span class="sr-only">(current)</span></a>
+{% endblock %}
+
+{% block content%}
+<div class="container-fluid_todo text-center">
+    <form action="/crud/read/{{id}}/update" method="POST">
+        {% csrf_token %}
+        <h5>Create some todo's</h5>
+        {% if request.method == "POST" %}
+            <input class="todo_box" type="text" name="id_field" value="{{ todo_item.id }}">
+        {% endif %}
+        <input class="todo_box" type="text" name="todo" required='True' value="{{ item }}">
+        <br>
+        <input type="submit" class="create_btn btn btn-primary" value="Update">
+    </form>
+    <form action="/crud/read/{{id}}/delete" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="create_btn btn btn-primary"  style ="margin-top:5%;" value="Delete">
+    </form>
+</div>
+{% endblock %}
+<input type="submit" class="create_btn btn btn-primary" value="Update">
+

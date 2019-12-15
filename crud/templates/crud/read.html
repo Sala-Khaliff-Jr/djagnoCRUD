@@ -1,0 +1,25 @@
+{% extends 'crud/index.html' %}
+{% block content %}
+<div class="container-fluid_todo text-center" style="background-color:black;">
+    <h3 style="color: rgb(255, 255, 255);">Tasks</h3>
+    <div class="row mt-4">
+        <div class="col">
+            <ul class="list-group">
+                {% if todo_item != 'None' %}
+                {% for todo_item in todo_items %}
+                    <a href="/crud/update/{{todo_item.id}}">
+                        <li class="list-group-item" style="color: black;">{{todo_item}}</li>
+                    </a>
+                    {% endfor %}
+                {%else%}
+                <h3 style="color: aliceblue;">No Tasks</h3>    
+                {% endif %}    
+               
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

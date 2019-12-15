@@ -1,0 +1,27 @@
+{% extends 'crud/index.html' %}
+{% block create_active %}
+<a class="nav-item nav-link active" href="create">Create <span class="sr-only">(current)</span></a>
+{% endblock %}
+
+{% block content%}
+<div class="container-fluid_todo text-center">
+    <form action="create" method="POST">
+        {% csrf_token %}
+        <h5>Create some todo's</h5>
+        <input class="todo_box" type="text" name="todo" required='True'>
+        <input type="submit" class="create_btn btn btn-primary" value="+">
+    </form>
+    <div class="success">
+        {% if flag == 'True' %}
+        <h5>Task has been succesfully added 👍👍</h5>
+        <p>Add some more tasks or proceed to Read</p>
+        <a href="/crud/read/0/read" class="button"><button type="button" class="btn btn-primary btn-lg">Read
+            </button></a>
+        {% else %}
+        <p>No tasks now</p>
+        {% endif %}
+        {% endblock %}
+    </div>
+    
+</div>
+

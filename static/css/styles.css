@@ -1,0 +1,40 @@
+body{
+    margin: auto;
+}
+.create_btn{
+    border-radius: 50%;
+}
+.container-fluid{
+    margin-top: 1.5rem;
+    color: white;
+    background-color: black;
+}
+.mx-auto{
+    margin-top: 1.5rem;
+}
+.button{
+    color: white;   
+}
+.button:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.container-fluid_todo{
+    background-color: black;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+.todo_box{
+    margin-bottom: 20px;
+    width:auto;
+    height: auto;
+    font-size: 1.5rem;
+}
+.list_group_items{
+    width: 100%;
+}
+.success{
+    padding-top: 100px;
+}
